@@ -1,0 +1,46 @@
+<div class="menu-navigation menu-v2">
+
+    <div class="menu-title">
+        <h1>Contact</h1>
+        <span class="color-highlight">Premium Mobile Interfaces</span>
+    </div>
+    
+    <span class="menu-divider">Contact</span>
+    <div class="menu-items">
+        <a href="#"><i class="fa fa-phone color-phone"></i><span>Call</span><i class="fa fa-angle-right"></i></a>
+        <a href="#"><i class="fa fa-comment color-red2-dark"></i><span>Text</span><i class="fa fa-angle-right"></i></a>
+        <a href="#"><i class="fa fa-envelope color-blue2-dark"></i><span>Mail</span><i class="fa fa-angle-right"></i></a>
+    </div>
+    <span class="menu-divider">Social</span>
+    <div class="menu-items bottom-10">
+        <a href="#"><i class="fab fa-facebook-f color-facebook"></i><span>Facebook</span><i class="fa fa-angle-right"></i></a>
+        <a href="#"><i class="fab fa-twitter color-twitter"></i><span>Twitter</span><i class="fa fa-angle-right"></i></a>
+        <a href="#"><i class="fab fa-instagram color-instagram"></i><span>Instagram</span><i class="fa fa-angle-right"></i></a>
+        <a href="#"><i class="fab fa-pinterest-p color-pinterest"></i><span>Pinterest</span><i class="fa fa-angle-right"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in color-linkedin"></i><span>LinkedIn</span><i class="fa fa-angle-right"></i></a>
+        <a href="#"><i class="fab fa-whatsapp color-whatsapp"></i><span>WhatsApp</span><i class="fa fa-angle-right"></i></a>
+    </div>
+    <p class="font-10 left-20 bottom-10">Copyright <span class="copyright-year"></span>. All rights reserved</p>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){      
+    'use strict'	
+    //Close Menu Function
+    $('.close-menu').on('click',function(){
+        $('.header-fixed, .footer-menu, .page-content').css({'transform':'translate(0,0)'});
+        $('.header').removeClass('menu-hide-header');
+        $('.footer-menu').removeClass('menu-hide-footer');
+        $('.menu-box').removeClass('menu-active');
+        $('.menu-hider').removeClass('menu-hider-visible menu-hider-3d');
+        $('.menu-hider').css({"transform":"translate(0,0)"})
+        $('.page-content').removeClass('page-content-round');
+        return false;
+    });
+    //Copyright Year 
+    var copyrightYear = $('.copyright-year ,#copyright-year');
+    var dteNow = new Date(); var intYear = dteNow.getFullYear();
+    copyrightYear.html(intYear);
+
+});
+</script>

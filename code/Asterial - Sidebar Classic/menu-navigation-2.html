@@ -1,0 +1,54 @@
+<div class="menu-navigation menu-v2">
+    <div class="menu-header">
+        <a href="#"><i class="color-facebook fab fa-facebook-f"></i></a>
+        <a href="#"><i class="color-twitter fab fa-twitter"></i></a>
+        <a href="#"><i class="color-instagram fab fa-instagram"></i></a>
+        <a href="#"><i class="color-phone fa fa-phone"></i></a>
+        <a href="#" class="close-menu"><i class="color-red2-dark fa fa-times"></i></a>
+        <div class="clear"></div>
+    </div>
+
+    <div class="menu-title">
+        <h1>Menu</h1>
+        <span class="color-highlight">Premium Mobile Interfaces</span>
+    </div>
+    
+    <span class="menu-divider">Navigation</span>
+    <div class="menu-items">
+        <a id="nav-page-welcome" href="index.html"><i class="fa fa-star color-yellow1-dark"></i><span>Welcome</span><i class="fa fa-angle-right"></i></a>
+        <a id="nav-page-homepages" href="homepages.html"><i class="fa fa-home color-blue2-dark"></i><span>Homepages</span><i class="fa fa-angle-right"></i></a>
+        <a id="nav-page-components" href="components.html"><i class="fa fa-cog color-red2-dark"></i><span>Components</span><i class="fa fa-angle-right"></i></a>
+        <a id="nav-page-media" href="media.html"><i class="fa fa-camera color-green2-dark"></i><span>Media Pages</span><i class="fa fa-angle-right"></i></a>
+        <a id="nav-page-navigations" href="navigations.html"><i class="fa fa-bars color-teal2-dark"></i><span>Navigations</span><i class="fa fa-angle-right"></i></a>
+        <a id="nav-page-pages" href="pages.html"><i class="fa fa-file color-brown2-dark"></i><span>Site Pages</span><i class="fa fa-angle-right"></i></a>
+        <a id="nav-page-envelope" href="contact"><i class="fa fa-envelope color-blue2-dark"></i><span>Contact</span><i class="fa fa-angle-right"></i></a>
+    </div>
+    <span class="menu-divider">Get Social</span>
+    <div class="menu-items bottom-10">
+        <a id="nav-page-welcome" href="#"><i class="fab fa-facebook-f color-facebook"></i><span>Facebook</span><i class="fa fa-angle-right"></i></a>
+        <a id="nav-page-homepages" href="#"><i class="fab fa-twitter color-twitter"></i><span>Twitter</span><i class="fa fa-angle-right"></i></a>
+        <a id="nav-page-components" href="#"><i class="fab fa-instagram color-instagram"></i><span>Instagram</span><i class="fa fa-angle-right"></i></a>
+    </div>
+    <p class="font-10 left-20 bottom-10">Copyright <span class="copyright-year"></span>. All rights reserved</p>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){      
+    'use strict'	
+    //Close Menu Function
+    $('.close-menu').on('click',function(){
+        $('.header-fixed, .footer-menu, .page-content').css({'transform':'translate(0,0)'});
+        $('.header').removeClass('menu-hide-header');
+        $('.footer-menu').removeClass('menu-hide-footer');
+        $('.menu-box').removeClass('menu-active');
+        $('.menu-hider').removeClass('menu-hider-visible menu-hider-3d');
+        $('.menu-hider').css({"transform":"translate(0,0)"})
+        $('.page-content').removeClass('page-content-round');
+        return false;
+    });
+    //Copyright Year 
+    var copyrightYear = $('.copyright-year ,#copyright-year');
+    var dteNow = new Date(); var intYear = dteNow.getFullYear();
+    copyrightYear.html(intYear);
+});
+</script>

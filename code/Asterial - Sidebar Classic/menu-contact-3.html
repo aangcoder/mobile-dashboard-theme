@@ -1,0 +1,45 @@
+<div class="menu-navigation menu-v3">
+
+    <div class="menu-title">
+        <h1>Get Social</h1>
+        <span class="color-highlight">Premium Mobile Interfaces</span>
+        <a href="#"><i class="close-menu fa fa-times color-red2-dark"></i></a>
+    </div>
+
+    <div class="menu-items">
+        <a href="#"><span>Facebook</span><i class="fa fa-angle-right"></i></a>
+        <a href="#"><span>Twitter</span><i class="fa fa-angle-right"></i></a>
+        <a href="#"><span>Instagram</span><i class="fa fa-angle-right"></i></a>
+        <a href="#"><span>Pinterest</span><i class="fa fa-angle-right"></i></a>
+        <a href="#"><span>LinkedIn</span><i class="fa fa-angle-right"></i></a>
+        <a href="#"><span>AppStyled</span><i class="fa fa-angle-right"></i></a>
+        <a href="#"><span>Contact</span><i class="fa fa-angle-right"></i></a>
+        <a class="close-menu" href="#"><span>Close</span><i class="fa fa-angle-right"></i></a>
+    </div>
+
+    <div class="divider divider-margins top-30"></div>    
+    <p class="font-10 left-20 bottom-10">Copyright <span class="copyright-year"></span>. All rights reserved</p>
+</div>
+
+
+<script type="text/javascript">
+$(document).ready(function(){      
+    'use strict'	
+    //Close Menu Function
+    $('.close-menu').on('click',function(){
+        $('.header-fixed, .footer-menu, .page-content').css({'transform':'translate(0,0)'});
+        $('.header').removeClass('menu-hide-header');
+        $('.footer-menu').removeClass('menu-hide-footer');
+        $('.menu-box').removeClass('menu-active');
+        $('.menu-hider').removeClass('menu-hider-visible menu-hider-3d');
+        $('.menu-hider').css({"transform":"translate(0,0)"})
+        $('.page-content').removeClass('page-content-round');
+        return false;
+    });
+    //Copyright Year 
+    var copyrightYear = $('.copyright-year ,#copyright-year');
+    var dteNow = new Date(); var intYear = dteNow.getFullYear();
+    copyrightYear.html(intYear);
+
+});
+</script>
